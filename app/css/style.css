@@ -338,26 +338,22 @@ template {
 }
 
 body, html {
-  position: absolute;
-  width: 100%;
   height: 100%;
-  top: 0;
   left: 0;
   margin: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  top: 0;
+  width: 100%;
 }
 
 #logo {
-  width: 400px;
   height: 100px;
-  position: absolute;
   overflow: visible;
+  width: 400px;
 }
 
 .logo {
-  width: 400px;
   height: 100px;
   opacity: 0;
+  position: absolute;
+  width: 400px;
 }
