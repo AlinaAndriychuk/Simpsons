@@ -345,15 +345,25 @@ body, html {
   width: 100%;
 }
 
+.header {
+  background: url(../img/header1.png) no-repeat right;
+  background-size: contain;
+  height: 100vh;
+}
+
+.header__menu {
+  margin: 0;
+}
+
 #logo {
-  height: 100px;
+  height: 500px;
   overflow: visible;
-  width: 400px;
+  width: 700px;
 }
 
 .logo {
-  height: 100px;
+  height: 500px;
   opacity: 0;
   position: absolute;
-  width: 400px;
+  width: 700px;
 }
