@@ -5,21 +5,38 @@
   document.onreadystatechange = () => {
 
     if (document.readyState === 'complete') {
-              
-      /**
-       * Setup your Lazy Line element.
-       * see README file for more settings
-       */
-
       let el = document.querySelector('#logo');
       let myAnimation = new LazyLinePainter(el, {"ease":"easeInSine","strokeWidth":2.7,"strokeOpacity":1,"strokeColor":"#000000","strokeCap":"round"}); 
       myAnimation.paint(); 
       gsap.to(".logo", {opacity:1, duration:1, delay:4})
     }
-  }
+  };
+
+ 
 
 })();
 
+$(function(){
+  let grad = 180;
+
+  $(".header__burger-menu").on("click", function(){
+    gsap.to(".header__burger-menu", { rotation: grad});
+    if(grad == 180){
+      grad = 0;
+    } else {
+      grad = 180;
+    }
+    $(".header__menu").toggleClass("open-menu")
+  })
+  $(".header__link-item").on("click", function(e){
+    var anchor = $(this);
+    $('html, body').stop().animate({
+      scrollTop: $(anchor.attr('href')).offset().top - 70 + "px"
+    }, 777);
+    e.preventDefault();
+    return false;
+  });
+})  
 // alert("hello");
 
 // let xhttp = new XMLHttpRequest();

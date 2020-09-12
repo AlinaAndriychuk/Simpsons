@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="img/icon-donut.png" type="image/png">
-    <link href="https://fonts.googleapis.com/css2?family=Barlow&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
     <title>The Simpsons</title>
     <script src = "js/libs.min.js"></script>
     <script src="js/main.js"></script>
@@ -13,6 +13,7 @@
 <body>
     <header class="header">
         <nav class="header__navigation">
+            <img class="header__burger-menu" src="img/menu.png" alt="menu">
             <menu class="header__menu">
                 <li class="header__item">
                     <a class="header__link-item" href="#">Series</a>
@@ -70,7 +71,7 @@
         </div>
         <div class="header__bottom">
             <h2 class="header__title">
-                Generate Simpsons' Quote
+                Generate <br> Simpsons' Quote
             </h2>
             <a class="header__link" href="#">
                 Lets Go
@@ -81,10 +82,8 @@
         <h1 class="section-title">
             Watch trailer
         </h1>
-        <div class="video-container">
-            <video class="series__video" preload="auto" controls="controls" loop="loop" src="img/SimpsonsMovie.mp4"></video>
-        </div>
-        <div class="image-container">
+        <video class="series__video" poster="img/poster.png" preload="auto" controls="controls" loop="loop" src="img/SimpsonsMovie.mp4"></video>
+        <div class="image-container clearfix">
             <img class="series__image" src="img/screen1.jpg" alt="screenshot from Simpsons">
             <img class="series__image" src="img/screen2.jpg" alt="screenshot from Simpsons">
             <img class="series__image" src="img/screen3.jpg" alt="screenshot from Simpsons">
@@ -97,82 +96,86 @@
         <h1 class="section-title">
             favourite characters
         </h1>
-        <div class="carousel__button"></div>
-        <div class="carousel__button"></div>
-        <div class="carouse-container">
-            <div class="carousel-block">
+        <div class="carousel__button-container">
+            <div class="carousel__button">⇦</div>
+        </div>
+        <div class="carousel__button-container">
+            <div class="carousel__button">⇨</div>
+        </div>
+        <ul class="carousel-container">
+            <li class="carousel-block">
                 <img class="carousel__image" src="img/apu1.png" alt="apu">
                 <p class="carousel__text">
                     Apu
                 </p>
-            </div>
-            <div class="carousel-block">
+            </li>
+            <li class="carousel-block">
                 <img class="carousel__image" src="img/barney1.png" alt="barney">
                 <p class="carousel__text">
                     Apu
                 </p>
-            </div>
-            <div class="carousel-block">
+            </li>
+            <li class="carousel-block">
                 <img class="carousel__image" src="img/bart1.png" alt="bart">
                 <p class="carousel__text">
                     Apu
                 </p>
-            </div>
-            <div class="carousel-block">
+            </li>
+            <li class="carousel-block">
                 <img class="carousel__image" src="img/homer1.png" alt="homer">
                 <p class="carousel__text">
                     Apu
                 </p>
-            </div>
-            <div class="carousel-block">
+            </li>
+            <li class="carousel-block">
                 <img class="carousel__image" src="img/krusty1.png" alt="krusty">
                 <p class="carousel__text">
                     Apu
                 </p>
-            </div>
-            <div class="carousel-block">
+            </li>
+            <li class="carousel-block">
                 <img class="carousel__image" src="img/lisa1.png" alt="lisa">
                 <p class="carousel__text">
                     Apu
                 </p>
-            </div>
-            <div class="carousel-block">
+            </li>
+            <li class="carousel-block">
                 <img class="carousel__image" src="img/maggie1.png" alt="maggie">
                 <p class="carousel__text">
                     Apu
                 </p>
-            </div>
-            <div class="carousel-block">
+            </li>
+            <li class="carousel-block">
                 <img class="carousel__image" src="img/marge1.png" alt="marge">
                 <p class="carousel__text">
                     Apu
                 </p>
-            </div>
-            <div class="carousel-block">
+            </li>
+            <li class="carousel-block">
                 <img class="carousel__image" src="img/mil1.png" alt="milhouse">
                 <p class="carousel__text">
                     Apu
                 </p>
-            </div>
-            <div class="carousel-block">
+            </li>
+            <li class="carousel-block">
                 <img class="carousel__image" src="img/moe1.png" alt="moe">
                 <p class="carousel__text">
                     Apu
                 </p>
-            </div>
-            <div class="carousel-block">
+            </li>
+            <li class="carousel-block">
                 <img class="carousel__image" src="img/mr1.png" alt="mr Burns">
                 <p class="carousel__text">
                     Apu
                 </p>
-            </div>
-            <div class="carousel-block">
+            </li>
+            <li class="carousel-block">
                 <img class="carousel__image" src="img/ned1.png" alt="ned">
                 <p class="carousel__text">
                     Apu
                 </p>
-            </div>
-        </div>
+            </li>
+        </ul>
     </section>
     <section class="game">
         <h1 class="section-title">
