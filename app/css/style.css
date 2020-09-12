@@ -338,6 +338,7 @@ template {
 }
 
 body, html {
+  font-family: 'Architects Daughter', cursive;
   height: 100%;
   left: 0;
   margin: 0;
@@ -346,24 +347,268 @@ body, html {
 }
 
 .header {
-  background: url(../img/header1.png) no-repeat right;
-  background-size: contain;
+  background: url(../img/header1.png) no-repeat #ffbdd3;
+  background-position-x: 100px;
+  background-position-y: bottom;
+  background-size: 70vh;
   height: 100vh;
 }
 
+.header__navigation {
+  display: flex;
+  justify-content: center;
+}
+
 .header__menu {
+  display: block;
+  list-style-type: none;
   margin: 0;
+  padding: 0;
+}
+
+.header__item {
+  float: left;
+  margin: 30px 5px;
+}
+
+.header__link-item {
+  border-radius: 5px;
+  color: #000;
+  font-size: 20px;
+  height: 60px;
+  padding: 20px;
+  text-decoration: none;
+  transition-duration: 0.3s;
+  vertical-align: middle;
+}
+
+.header__link-item:hover {
+  background-color: #9c6274;
+  color: #fff;
+}
+
+.header__bottom {
+  text-align: center;
+}
+
+.header__title {
+  color: #fff;
+  font-size: 50px;
+  margin: 37vh 0 5vh;
+  text-shadow: #9c6274 2px 2px 0, #9c6274 -2px -2px 0, #9c6274 -2px 2px 0, #9c6274 2px -2px 0;
+}
+
+.header__link {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: #9c6274 3px 5px;
+  color: #000;
+  padding: 20px 30px;
+  text-decoration: none;
+  transition-duration: 0.3s;
+}
+
+.header__link:hover {
+  background-color: #9c6274;
+  box-shadow: none;
+  color: #fff;
+}
+
+.header__burger-menu {
+  display: none;
 }
 
 #logo {
-  height: 500px;
+  height: 20vh;
+  margin-left: 33%;
   overflow: visible;
-  width: 700px;
+  position: absolute;
+  width: 33%;
 }
 
 .logo {
-  height: 500px;
+  height: 20vh;
+  margin-left: 33%;
   opacity: 0;
   position: absolute;
+  width: 33%;
+}
+
+.section-title {
+  font-size: 46px;
+  margin: 40px 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.clearfix {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.series__video {
+  margin: 0 10%;
+  width: 80%;
+}
+
+.series .image-container {
+  background-color: #e8d5f3;
+  margin: 50px 0;
+  width: 100%;
+}
+
+.series__image {
+  display: block;
+  float: left;
+  margin: 2.6%;
+  width: 28%;
+}
+
+.carousel-container {
+  border-radius: 10px;
+  height: 200px;
+  overflow: hidden;
   width: 700px;
+  margin-top: 40vh;
+  margin-left: 35%;
+  padding-left: 10px;
+  list-style: none;
+  font-size: 0;
+  transition: 1s;
+  background-color: #ececec;
+}
+
+.carousel-block {
+  display: inline-block;
+  width: 130px;
+}
+
+.carousel__image {
+  width: 130px;
+  height: 130px;
+  display: block;
+}
+
+.carousel__text {
+  color: #000;
+  height: 30px;
+}
+
+.carousel__button-container {
+  border-radius: 10px;
+  margin-left: 90%;
+  height: 130px;
+  width: 50px;
+  background-color: #ececec;
+  position: absolute;
+}
+
+.carousel__button-container:first-child {
+  margin-left: -50%;
+}
+
+.carousel__button {
+  margin-top: 50px;
+  margin-left: 12px;
+  padding: 0;
+  background: #ddd;
+  border-radius: 15px;
+  border: 1px solid gray;
+  font-size: 24px;
+  line-height: 24px;
+  color: #444;
+  display: block;
+  position: absolute;
+}
+
+@media screen and (max-width: 1000px) {
+  .header {
+    background: url(../img/header3.png) no-repeat center #ffbdd3;
+    background-size: 400px;
+  }
+  .header__navigation {
+    justify-content: flex-start;
+  }
+  .header__menu {
+    background-color: #ffbdd3;
+    display: none;
+    height: 75vh;
+    margin-top: 25vh;
+    position: absolute;
+    width: 100%;
+  }
+  .header__item {
+    clear: both;
+    margin: 4vh 0;
+    text-align: center;
+    width: 100%;
+  }
+  .header__title {
+    font-size: 30px;
+    margin: 40vh 0 7vh;
+  }
+  .header__burger-menu {
+    cursor: pointer;
+    display: block;
+    margin: 20px;
+    position: absolute;
+    width: 10vh;
+    z-index: 1000;
+  }
+  .header__link-item {
+    padding: 10px 50px;
+  }
+  .open-menu {
+    display: block;
+  }
+  #logo {
+    width: 56%;
+    margin: 10px 22% 0;
+    position: relative;
+  }
+  .logo {
+    width: 56%;
+    margin: 10px 22% 0;
+  }
+  .series__video {
+    margin: 0 2.5%;
+    width: 95%;
+  }
+  .series__image {
+    width: 44.8%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .header {
+    background: url(../img/header3.png) no-repeat center #ffbdd3;
+    background-size: 200px;
+  }
+  .header__title {
+    font-size: 26px;
+    margin: 37vh 0 7vh;
+  }
+  .header__burger-menu {
+    width: 50px;
+  }
+  #logo {
+    width: 56%;
+    margin: 40px 22% 0;
+    position: relative;
+  }
+  .logo {
+    width: 56%;
+    margin: 40px 22% 0;
+  }
+  .series__video {
+    margin: 0;
+    width: 100%;
+  }
+  .series__image {
+    width: 94.3%;
+  }
+  .section-title {
+    font-size: 30px;
+  }
 }
