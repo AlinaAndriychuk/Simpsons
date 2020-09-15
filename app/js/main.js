@@ -116,7 +116,7 @@ function back(){
 }
 
 
-let carouselGame = document.querySelector(".game__image-container")
+let carouselGame = document.querySelector(".game__image-container");
 let carouselButtonsGame = document.querySelectorAll(".game__button-container");
 carouselButtonsGame[0].onclick = aheadGame;
 
@@ -153,7 +153,7 @@ function backGame(){
     }
 }
 
-let gameField = document.getElementsByClassName("game__field")[0];
+let gameField = document.getElementsByClassName("game")[0];
 gameField.ondblclick = function (event) {
   let simpson = event.target.closest(".game__image");
   if(!simpson) return;
@@ -244,7 +244,53 @@ gameContainer.addEventListener('mousedown', function(event) {
   }
 
 });
+let currentDefault = true;
+let buttonDefault = document.getElementsByClassName("game__button-default")[0];
+buttonDefault.onclick = function(event) {
+  let allPersonages = gameContainer.getElementsByClassName("game__image");
+  
+  let randomNumbers = [ 4, 3.6, 10, 18, 18, 7, 16.5, 13, 16, 2.7, 12, 7, 4, 9, 3];
+  let randomNumbersTop = [3, 6.5, 3, 6, 2, 3, 2.5, 4, 6.2, 4, 3.5, 7, 6, 7, 5]
+  let i = 0;
 
+  if(currentDefault) {
+    for( let every of allPersonages) {
+
+      every.style.position = "absolute"
+      every.style.marginLeft = randomNumbers[i] * 10 + "vh";
+      every.style.marginTop = randomNumbersTop[i] * 10 + "vh";
+      i++
+    }
+    currentDefault = false;
+  } else {
+    for( let every of allPersonages) {
+
+      every.style.position = "relative"
+      every.style.marginLeft = 0 + "px";
+      every.style.marginTop = 0 + "px";
+    }
+    currentDefault = true;
+  }
+  
+}
+
+let gameHalfField = document.getElementsByClassName("game__field")[0];
+let buttonImage = document.getElementsByClassName("game__button-bgimage")[0];
+let numberOfBackground = 0;
+let urlOfBackground = ["url(../img/back1.jpg)", "url(../img/back2.jpg)", "url(../img/back3.jpg)", "url(../img/back4.jpg)", "url(../img/school.jpg)"];
+let colorOfCarousel = ["#ffffff", "#fde101", "#aeaeb0", "#8d6099" , "#f1c3b3"];
+let colorOfButtons = ["#92d4f7", "#f185b6", "#48602e", "#631e5d", "#a777c1"]
+buttonImage.onclick = function(event) {
+  if(numberOfBackground > 4) numberOfBackground = 0;
+
+  gameHalfField.style.backgroundImage = urlOfBackground[numberOfBackground];
+  buttonDefault.style.backgroundColor = colorOfButtons[numberOfBackground];
+  buttonImage.style.backgroundColor = colorOfButtons[numberOfBackground];
+  carouselButtonsGame[0].style.backgroundColor = colorOfButtons[numberOfBackground];
+  carouselButtonsGame[1].style.backgroundColor = colorOfButtons[numberOfBackground];
+  carouselGame.style.backgroundColor = colorOfCarousel[numberOfBackground];
+  numberOfBackground++;
+} 
 })
 // alert("hello");
 

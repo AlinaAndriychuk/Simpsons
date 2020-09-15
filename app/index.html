@@ -16,7 +16,7 @@
             <img class="header__burger-menu" src="img/menu.png" alt="menu">
             <menu class="header__menu">
                 <li class="header__item">
-                    <a class="header__link-item" href="#">Series</a>
+                    <a class="header__link-item" href="#">Trailer</a>
                 </li>
                 <li class="header__item">
                     <a class="header__link-item" href="#">Characters</a>
@@ -26,9 +26,6 @@
                 </li>
                 <li class="header__item">
                     <a class="header__link-item" href="#">Quotes</a>
-                </li>
-                <li class="header__item">
-                    <a class="header__link-item" href="#">Help</a>
                 </li>
             </menu>
         </nav>
@@ -82,7 +79,7 @@
         <h1 class="section-title">
             Watch trailer
         </h1>
-        <video class="series__video" poster="img/poster.png" preload="auto" controls="controls" loop="loop" src="img/SimpsonsMovie.mp4"></video>
+        <video class="series__video" poster="img/poster.png" preload="auto" controls="controls" loop="loop" src="video/SimpsonsMovie.mp4"></video>
         <div class="image-container clearfix">
             <img class="series__image" src="img/screen1.jpg" alt="screenshot from Simpsons">
             <img class="series__image" src="img/screen2.jpg" alt="screenshot from Simpsons">
@@ -97,8 +94,13 @@
             favourite characters
         </h1>
         <div class="carousel-container">
-            <div class="carousel__button-container">
-                <img class="carousel__button" alt="arrow" src="img/button-left.png">
+            <div class="carousel__button-field">
+                <div class="carousel__button-container">
+                    <img class="carousel__button" alt="arrow" src="img/button-left.png">
+                </div>
+                <div class="carousel__button-container">
+                    <img class="carousel__button" alt="arrow" src="img/button-right.png">
+                </div>
             </div>
             <ul class="carousel-field">
                 <div class="carousel__gallery">
@@ -109,76 +111,73 @@
                         </p>
                     </li>
                     <li class="carousel-block">
-                        <img class="carousel__image" src="img/barney1.png" alt="barney">
+                        <img class="carousel__image" src="img/duffman1.png" alt="duffman">
                         <p class="carousel__text">
-                            Apu
+                            Duffman
                         </p>
                     </li>
                     <li class="carousel-block">
-                        <img class="carousel__image" src="img/bart1.png" alt="bart">
+                        <img class="carousel__image" src="img/barney1.png" alt="barney">
                         <p class="carousel__text">
-                            Apu
+                            Barney
+                        </p>
+                    </li>
+                    <li class="carousel-block">
+                        <img class="carousel__image carousel__image--small" src="img/bart1.png" alt="bart">
+                        <p class="carousel__text">
+                            Bart
                         </p>
                     </li>
                     <li class="carousel-block">
                         <img class="carousel__image" src="img/homer1.png" alt="homer">
                         <p class="carousel__text">
-                            Apu
+                            Homer
                         </p>
                     </li>
                     <li class="carousel-block">
                         <img class="carousel__image" src="img/krusty1.png" alt="krusty">
                         <p class="carousel__text">
-                            Apu
+                            Krusty
                         </p>
                     </li>
                     <li class="carousel-block">
-                        <img class="carousel__image" src="img/lisa1.png" alt="lisa">
+                        <img class="carousel__image carousel__image--small" src="img/lisa1.png" alt="lisa">
                         <p class="carousel__text">
-                            Apu
+                            Lisa
                         </p>
                     </li>
                     <li class="carousel-block">
-                        <img class="carousel__image" src="img/maggie1.png" alt="maggie">
+                        <img class="carousel__image carousel__image--supersmall" src="img/maggie1.png" alt="maggie">
                         <p class="carousel__text">
-                            Apu
+                            Maggie
                         </p>
                     </li>
                     <li class="carousel-block">
                         <img class="carousel__image" src="img/marge1.png" alt="marge">
                         <p class="carousel__text">
-                            Apu
+                            Marge
                         </p>
                     </li>
                     <li class="carousel-block">
-                        <img class="carousel__image" src="img/mil1.png" alt="milhouse">
+                        <img class="carousel__image carousel__image--small" src="img/milhouse1.png" alt="milhouse">
                         <p class="carousel__text">
-                            Apu
+                            Milhouse
                         </p>
                     </li>
                     <li class="carousel-block">
-                        <img class="carousel__image" src="img/moe1.png" alt="moe">
+                        <img class="carousel__image" src="img/mrBurns1.png" alt="mr Burns">
                         <p class="carousel__text">
-                            Apu
-                        </p>
-                    </li>
-                    <li class="carousel-block">
-                        <img class="carousel__image" src="img/mr1.png" alt="mr Burns">
-                        <p class="carousel__text">
-                            Apu
+                            Mr. Burns
                         </p>
                     </li>
                     <li class="carousel-block">
                         <img class="carousel__image" src="img/ned1.png" alt="ned">
                         <p class="carousel__text">
-                            Apu
+                            Ned
                         </p>
                     </li>
                 </div>
             </ul>
-            <div class="carousel__button-container">
-                <img class="carousel__button" alt="arrow" src="img/button-right.png">
-            </div>
         </div>
     </section>
     <section class="game">
@@ -188,42 +187,58 @@
                 P.S. Double-click = change character pose 
             </p>
         </h1>
+        <ul class="game__image-container">
+            <div class="game__button-container">
+                <img class="game__button" src="img/button-down.png" alt="arrow">
+            </div>
+            <div class="game__button-container">
+                <img class="game__button" src="img/button-up.png" alt="arrow">
+            </div>
+            <div class="game__button-default">
+                Default
+            </div>
+            <div class="game__button-bgimage">
+                Change locatoin
+            </div>
+            <img class="game__image game__image--tall" src="img/maude1.png" alt="maude">
+            <img class="game__image game__image--middle" src="img/milhouse1.png" alt="milhouse">
+            <img class="game__image game__image--tall" src="img/krusty1.png" alt="krusty">
+            <img class="game__image game__image--middle" src="img/scratchy1.png" alt="scratchy">
+            <img class="game__image game__image--tall" src="img/barney1.png" alt="barney">
+            <img class="game__image game__image--tall" src="img/ned1.png" alt="ned">
+            <img class="game__image game__image--tall" src="img/duffman1.png" alt="duffman">
+            <img class="game__image game__image--tall" src="img/apu1.png" alt="apu">
+            <img class="game__image game__image--middle" src="img/itchy1.png" alt="itchy">
+            <img class="game__image game__image--tall" src="img/mrBurns1.png" alt="mrBurns">
+        </ul>
         <div class="game__field">
-            <img class="game-image" src="img/homer1.png" alt="homer" >
-            <img class="game-image" src="img/bart1.png" alt="bart" >
-            <img class="game-image" src="img/lisa1.png" alt="lisa" >
-            <img class="game-image" src="img/maggie1.png" alt="maggie" >
-            <img class="game-image" src="img/marge1.png" alt="marge" >
+            <img class="game__image game__image--tall" src="img/homer1.png" alt="homer" >
+            <img class="game__image game__image--middle" src="img/bart1.png" alt="bart" >
+            <img class="game__image game__image--middle" src="img/lisa1.png" alt="lisa" >
+            <img class="game__image game__image--little" src="img/maggie1.png" alt="maggie" >
+            <img class="game__image game__image--supertall" src="img/marge1.png" alt="marge" >
         </div>
     </section>
     <section class="quotes">
         <h1 class="section-title">
             Quotes generator
         </h1>
-        <img class="quotes__side-image" src="img/side1.jpg" alt="simpsons">
         <div class="quotes-container">
-            <img class="quotes__logo" src="" alt="">
-            <h2 class="quotes__quote"></h2>
-            <img class="quotes__image" src="" alt="character">
-            <span class="quotes__character"></span>
-            <a class="quotes__button" href="#"></a>
+            <img class="quotes__side-image" src="img/side1.jpg" alt="simpsons">
+            <div class="quotes__field">
+                <img class="quotes__logo" src="img/logo.svg" alt="logo">
+                <h2 class="quotes__quote">IUdhihv</h2>
+                <img class="quotes__image" src="img/mil1.png" alt="character">
+                <p class="quotes__character">Milhouse</p>
+                <a class="quotes__button" href="#">Show me another!</a>
+            </div>
+            <img  class="quotes__side-image" src="img/side2.jpg" alt="simpsons">
         </div>
-        <img  class="quotes__side-image" src="img/side2.jpg" alt="simpsons">
     </section>
     <footer class="footer">
-        <div class="footer-block">
-            <h1 class="section-title">
-                Feedback
-            </h1>
-            <form class="form" action="">
-                <fieldset class="form__field">
-                    <input class="form__input" type="text">
-                    <input class="form__input" type="email">
-                    <button class="form__button"></button>
-                </fieldset>
-                <textarea class="form__text" name="" id="" cols="30" rows="10"></textarea>
-            </form>
-        </div>
+        <h1 class="section-title">
+            Thanks for being with us 
+        </h1>   
     </footer>
 </body>
 </html>

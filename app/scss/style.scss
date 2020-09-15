@@ -1,27 +1,511 @@
 @import "../../node_modules/normalize.css/normalize";
 
+$yellow : #ffe34f;
+$pink: #ffbdd3;
+$dark-pink: #9c6274;
+$red: #ee1f1f;
 
 body, html {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top:0;
-    left:0;
-    margin: 0;
+  font-family: 'Architects Daughter', cursive;
+  height: 100%;
+  left:0;
+  margin: 0;
+  top:0;
+  width: 100%;
+}
+
+.header {
+  background: url(../img/header1.png) no-repeat $pink;
+  background-position-x: 100px;
+  background-position-y: bottom;
+  background-size: 70vh;
+  height: 100vh;
+  &__navigation {
     display: flex;
-    align-items: center;
     justify-content: center;
   }
+  &__menu {
+    display: block;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  &__item {
+    float: left;
+    margin: 30px 5px;
+  }
+  &__link-item {
+    border-radius: 5px;
+    color: #000;
+    font-size: 20px;
+    height: 60px;
+    padding: 20px;
+    text-decoration: none;
+    transition-duration: 0.3s;
+    vertical-align: middle;
+  }
+  &__link-item:hover {
+    background-color: $dark-pink;
+    color: #fff;
 
-    #logo {
-      width: 400px;
-      height: 100px;
+  }
+  &__bottom {
+    text-align: center;
+  }
+  &__title {
+    color: #fff;
+    font-size: 50px;
+    margin: 37vh 0 5vh;
+    text-shadow: $dark-pink 2px 2px 0, $dark-pink -2px -2px 0, $dark-pink -2px 2px 0, $dark-pink 2px -2px 0;
+  }
+  &__link {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: $dark-pink 3px 5px;
+    color: #000;
+    padding: 20px 30px;
+    text-decoration: none;
+    transition-duration: 0.3s;
+  }
+  &__link:hover {
+    background-color: $dark-pink;
+    box-shadow: none;
+    color: #fff;
+  }
+  &__burger-menu {
+    display: none;
+  }
+}
+
+#logo {
+  height: 20vh;
+  margin-left: 33%;
+  overflow: visible;
+  position: absolute;
+  width: 33%;
+}
+
+.logo {
+  height: 20vh;
+  margin-left: 33%;
+  opacity: 0;
+  position: absolute;
+  width: 33%;
+}
+
+.section-title {
+  font-size: 46px;
+  margin: 40px 0;
+  padding: 5px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.clearfix {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.series {
+  &__video {
+    margin: 0 10%;
+    width: 80%;
+  }
+  .image-container {
+    background-color: #3b3b3b;
+    margin: 50px 0;
+    width: 100%;
+  }
+  &__image {
+    display: block;
+    float: left;
+    margin: 2.6%;
+    width: 28%;
+  }
+}
+
+.carousel {
+  &__button-field {
+    display: flex ;
+    justify-content: space-between;
+    position: absolute;
+    width: 100%;
+  }
+  &__button-container {
+    background-color:#f0f0f0;
+    cursor: pointer;
+    height: 380px;
+    transition-duration: 0.3s;
+    width: 100px;
+  }
+  &__button-container:hover {
+    background-color: #fff;
+  }
+  &__button {
+    margin: 135px 28px;
+    width: 42px;
+  }
+  &-container {
+    display: flex;
+    margin: 100px 0;
+    justify-content: space-between;
+  }
+  &-field {
+    background-color: #f0f0f0;
+    height: 350px;
+    list-style: none;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 30px 0 0 0;
+    transition: 1s;
+    width: 700px;
+  }
+  &__gallery {
+    width: 2831px;
+  }
+  &-block {
+    display: inline-block;
+    height: 350px;
+    width: 230px;
+  }
+  &__image {
+    display: block;
+    margin: 0 auto;
+    max-height: 280px;
+  }
+  &__text {
+    font-size: 24px;
+    text-align: center;
+  }
+  &__image--small {
+    max-height: 200px;
+  }
+  &__image--supersmall {
+    max-height: 150px;
+  }
+}
+
+.section-note {
+  font-size: 20px;
+}
+
+.game {
+  &__image-container {
+    background-color: #f1c3b3;
+    float: left;
+    height: 72vh;
+    margin: 0;
+    overflow: hidden;
+    padding: 7vh 5px 0;
+    width: 25vh;
+  }
+  &__button-container {
+    background-color: #a777c1;
+    cursor: pointer;
+    display: flex;
+    height: 5vh;
+    justify-content: center;
+    margin: -7vh -5px 0;
+    padding: 1vh 5px;
+    position: absolute;
+    transition-duration: 0.3s;
+    width: 25vh;
+    z-index: 1000;
+  }
+  &__button-container:hover, &__button-default:hover, &__button-bgimage:hover {
+    background-color: #f1c3b3;
+  }
+  &__button-container:first-child {
+    margin-top: 72vh;
+  }
+  &__button {
+    width: 13vh;
+  } 
+  &__button-default, &__button-bgimage{
+    background-color: #a777c1;
+    cursor: pointer;
+    height: 5vh;
+    margin: 79vh -5px 0;
+    padding: 2vh 5px 0;
+    position: absolute;
+    text-align: center;
+    width: 25vh;
+    z-index: 1000;
+  }
+  &__button-bgimage{
+    margin-top: 86vh ;
+  }
+  &__field {
+    background: url(../img/school.jpg) no-repeat bottom right;
+    background-position-x: 25vh;
+    background-size:  cover;
+    height: 100vh;
+    transition-duration: 0.3s;
+  }
+  &__image {
+    margin: 0 auto;
+  }
+  &__image--tall {
+    height: 38vh;
+  }
+  &__image--supertall {
+    height: 48vh;
+  }
+  &__image--little {
+    height: 18vh;
+  }
+  &__image--middle {
+    height: 25vh; 
+  }
+}
+
+.quotes {
+  &-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__side-image {
+    width: 25%;
+  }
+  &__field {
+    background-color: #ffe02f;
+    width: 50%;
+  }
+  &__logo {
+    margin: 2% 25%;
+    width: 50%;
+  }
+  &__quote {
+    height: 15%;
+    padding: 10px;
+    text-transform: uppercase;
+  }
+  &__image {
+    float: left;
+    height: 45%;
+  }
+  &__character {
+    font-size: 24px;
+    margin: 10% 0 10% 50%;
+  }
+  &__button {
+    background-color: #4ba7c4;
+    color: #fff;
+    display: block;
+    margin-left: 50%;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    width: 160px;
+  }
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 1000px) {
+  .header {
+    background: url(../img/header3.png) no-repeat center $pink;
+    background-size: 400px;
+    &__navigation {
+      justify-content: flex-start;
+    }
+    &__menu {
+      background-color: $pink;
+      display: none;
+      height: 75vh;
+      margin-top: 25vh;
       position: absolute;
-      overflow: visible;
+      width: 100%;
     }
+    &__item {
+      clear: both;
+      margin: 5vh 0;
+      text-align: center;
+      width: 100%;
+    }
+    &__title {
+      font-size: 30px;
+      margin: 40vh 0 7vh;
+    }
+    &__burger-menu {
+      cursor: pointer;
+      display: block;
+      margin: 20px;
+      position: absolute;
+      width: 10vh;
+      z-index: 1000;
+    }
+    &__link-item {
+      padding: 10px 50px;
+    }
+  }
 
-    .logo {
-        width:400px;
-        height:100px;
-        opacity: 0;
+  .open-menu {
+    display: block;
+  }
+
+  #logo {
+    width: 56%;
+    margin: 10px 22% 0;
+    position: relative;
+  }
+  .logo {
+    width: 56%;
+    margin: 10px 22% 0;
+  }
+
+  .series {
+    &__video {
+      margin: 0 2.5%;
+      width: 95%;
     }
+    &__image {
+      width: 44.8%;
+    }
+  } 
+  .carousel {
+    &__button-container {
+      width: 70px;
+    }
+    &__button {
+      margin: 152px 20px;
+      width: 30px;
+    }
+    &-container {
+      margin: 0;
+    }
+    &-field {
+      width: 471px;
+    }
+  } 
+  .game {
+    &__image-container {
+      display: none;
+    }
+    &__field {
+      background-position-x: 0;
+      .game__image {
+        margin-top: 0;
+      }
+    }
+  }
+
+  .quotes {
+    &__side-image {
+      display: none;
+    }
+    &__field {
+      width: 100%;
+    }
+    &__logo {
+      margin-left: 37%;
+      width: 26%;
+    }
+    &__character {
+      margin: 1% 0 5% 50%;
+    }
+  }
+  
+}
+
+@media screen and (max-width: 626px) {
+  .carousel {
+    &__button-container {
+      background-color: transparent;
+      width: 50px;
+    }
+    &__button-container:hover {
+      background-color: transparent;
+    }
+    &__button {
+      margin: 152px 10px;
+      width: 30px;
+    }
+    &-container {
+      margin: 0;
+    }
+    &-field {
+      width: 235px;
+    }
+  } 
+}
+
+@media screen and (max-width: 450px) {
+  .header {
+    background: url(../img/header3.png) no-repeat center $pink;
+    background-size: 200px;
+    &__title {
+      font-size: 26px;
+      margin: 37vh 0 7vh;
+    }
+    &__burger-menu {
+      width: 50px;
+    }
+  }
+  #logo {
+    width: 56%;
+    margin: 40px 22% 0;
+    position: relative;
+  }
+  .logo {
+    width: 56%;
+    margin: 40px 22% 0;
+  }
+  .series {
+    &__video {
+      margin: 0;
+      width: 100%;
+    }
+    &__image {
+      width: 94.3%;
+    }
+  } 
+  .section-title {
+    font-size: 30px;
+  }
+  .game {
+    &__image {
+      margin-top: 0;
+      max-height: 120px;
+    }
+    &__image--tall {
+      max-height: 180px;
+    }
+    &__image--supertall {
+      max-height: 215px;
+    }
+    &__image--little {
+      max-height: 90px;
+    }
+  }
+  .quotes {
+    &__logo {
+      margin-left: 30%;
+      width: 40%;
+    }
+    &__quote {
+      font-size: 18px;
+    }
+    &__image {
+      float: none;
+      margin: 0 20%;
+      max-width: 80%;
+    }
+    &__character {
+      font-size: 18px;
+      margin: 1% 0 5% 0;
+      text-align: center;
+    }
+    &__button {
+      margin: 0 3% 10%;
+      padding: 2%;
+      text-align: center;
+      width: 90%;
+    }
+  }
+} 
