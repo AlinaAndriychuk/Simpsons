@@ -11,12 +11,34 @@
       gsap.to(".logo", {opacity:1, duration:1, delay:4})
     }
   };
-
  
-
 })();
 
 $(function(){
+
+  gsap.from(".header__item", {duration: 2, x: -500, opacity: 0, scale: 0.5});
+  gsap.from(".header__title", { duration: 2, ease: "back.out(1.7)", y: -300 });
+  gsap.from(".header__link", { duration: 2, opacity: 0 });
+  gsap.from(".header__burger-menu", {duration: 2, y: 500});
+
+  let current1 = true,
+      current2 = true;
+
+  $(window).scroll(function() {
+    if(document.documentElement.clientWidth >= 985) {
+      if ($(this).scrollTop() > 900 && $(this).scrollTop() < 1700) {
+        effectVideoAppear(current1);
+        current1 = false;
+      }
+    } 
+  })
+
+  function effectVideoAppear(switcher) {
+    if(switcher) {
+      gsap.to(".image-container", { duration: 2, x: 1000, opacity: 1});
+    }
+  }
+
   let grad = 180;
 
   $(".header__burger-menu").on("click", function(){
@@ -31,7 +53,7 @@ $(function(){
   $(".header__link-item").on("click", function(e){
     var anchor = $(this);
     $('html, body').stop().animate({
-      scrollTop: $(anchor.attr('href')).offset().top - 70 + "px"
+      scrollTop: $(anchor.attr('href')).offset().top - 30 + "px"
     }, 777);
     e.preventDefault();
     return false;
@@ -278,8 +300,8 @@ let gameHalfField = document.getElementsByClassName("game__field")[0];
 let buttonImage = document.getElementsByClassName("game__button-bgimage")[0];
 let numberOfBackground = 0;
 let urlOfBackground = ["url(../app/img/back1.jpg)", "url(../app/img/back2.jpg)", "url(../app/img/back3.jpg)", "url(../app/img/back4.jpg)", "url(../app/img/school.jpg)"];
-let colorOfCarousel = ["#ffffff", "#fde101", "#aeaeb0", "#8d6099" , "#f1c3b3"];
-let colorOfButtons = ["#92d4f7", "#f185b6", "#48602e", "#631e5d", "#a777c1"]
+let colorOfCarousel = ["#ffffff", "#fde101", "#bdecec", "#8d6099" , "#f1c3b3"];
+let colorOfButtons = ["#92d4f7", "#f185b6", "#dfb9a3", "#631e5d", "#a777c1"]
 buttonImage.onclick = function(event) {
   if(numberOfBackground > 4) numberOfBackground = 0;
 
