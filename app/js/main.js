@@ -291,21 +291,40 @@ buttonImage.onclick = function(event) {
   carouselGame.style.backgroundColor = colorOfCarousel[numberOfBackground];
   numberOfBackground++;
 } 
+
+
+
+  let xhttp = new XMLHttpRequest();
+  let guoteButton = document.getElementsByClassName("quotes__button")[0];
+  xhttp.onreadystatechange = function() {
+      if(this.readyState == 4 && this.status == 200) {
+          handleAPILoaded(this.response)
+      }
+  }
+
+  guoteButton.onclick = function(){
+    xhttp.onreadystatechange = function() {
+      if(this.readyState == 4 && this.status == 200) {
+          handleAPILoaded(this.response)
+      }
+    }
+
+    xhttp.open("GET", "https://thesimpsonsquoteapi.glitch.me/quotes?count");
+    xhttp.send();
+  }
+
+  let quoteText = document.getElementsByClassName("quotes__quote")[0];
+  let quoteImage = document.getElementsByClassName("quotes__image")[0];
+  let quoteName = document.getElementsByClassName("quotes__character")[0];
+
+  function handleAPILoaded(code) {
+    let arrayOfCode = code.split("\"")
+    quoteText.innerText = arrayOfCode[3];
+    quoteName.innerText = arrayOfCode[7];
+    quoteImage.style.backgroundImage = "url("+ arrayOfCode[11]  + ")";
+
+  }
+
+
 })
-// alert("hello");
-
-// let xhttp = new XMLHttpRequest();
-
-// xhttp.onreadystatechange = function() {
-//     if(this.readyState == 4 && this.status == 200) {
-//         handleAPILoaded(this.response)
-//     }
-// }
-
-// xhttp.open("GET", "https://thesimpsonsquoteapi.glitch.me/quotes?count");
-// xhttp.send();
-
-// function handleAPILoaded(code) {
-//     $('p')[0].innerHTML = code;
-//     $("#character").attr("src", "https://cdn.glitch.com/3c3ffadc-3406-4440-bb95-d40ec8fcde72%2FNelsonMuntz.png")
-// }
+// 
