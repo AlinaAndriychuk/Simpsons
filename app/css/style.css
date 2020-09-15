@@ -437,6 +437,7 @@ body, html {
 .section-title {
   font-size: 46px;
   margin: 40px 0;
+  padding: 5px;
   text-align: center;
   text-transform: uppercase;
 }
@@ -465,25 +466,33 @@ body, html {
   width: 28%;
 }
 
+.carousel__button-field {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  width: 100%;
+}
+
 .carousel__button-container {
   background-color: #f0f0f0;
+  cursor: pointer;
   height: 380px;
+  transition-duration: 0.3s;
   width: 100px;
 }
 
+.carousel__button-container:hover {
+  background-color: #fff;
+}
+
 .carousel__button {
-  background: #f0f0f0;
-  color: #000;
-  display: block;
-  margin-top: 50px;
-  margin-left: 12px;
-  padding: 0;
-  position: absolute;
-  width: 50px;
+  margin: 135px 28px;
+  width: 42px;
 }
 
 .carousel-container {
   display: flex;
+  margin: 100px 0;
   justify-content: space-between;
 }
 
@@ -515,7 +524,146 @@ body, html {
 }
 
 .carousel__text {
+  font-size: 24px;
   text-align: center;
+}
+
+.carousel__image--small {
+  max-height: 200px;
+}
+
+.carousel__image--supersmall {
+  max-height: 150px;
+}
+
+.section-note {
+  font-size: 20px;
+}
+
+.game__image-container {
+  background-color: #f1c3b3;
+  float: left;
+  height: 72vh;
+  margin: 0;
+  overflow: hidden;
+  padding: 7vh 5px 0;
+  width: 25vh;
+}
+
+.game__button-container {
+  background-color: #a777c1;
+  cursor: pointer;
+  display: flex;
+  height: 5vh;
+  justify-content: center;
+  margin: -7vh -5px 0;
+  padding: 1vh 5px;
+  position: absolute;
+  transition-duration: 0.3s;
+  width: 25vh;
+  z-index: 1000;
+}
+
+.game__button-container:hover, .game__button-default:hover, .game__button-bgimage:hover {
+  background-color: #f1c3b3;
+}
+
+.game__button-container:first-child {
+  margin-top: 72vh;
+}
+
+.game__button {
+  width: 13vh;
+}
+
+.game__button-default, .game__button-bgimage {
+  background-color: #a777c1;
+  cursor: pointer;
+  height: 5vh;
+  margin: 79vh -5px 0;
+  padding: 2vh 5px 0;
+  position: absolute;
+  text-align: center;
+  width: 25vh;
+  z-index: 1000;
+}
+
+.game__button-bgimage {
+  margin-top: 86vh;
+}
+
+.game__field {
+  background: url(../img/school.jpg) no-repeat bottom right;
+  background-position-x: 25vh;
+  background-size: cover;
+  height: 100vh;
+  transition-duration: 0.3s;
+}
+
+.game__image {
+  margin: 0 auto;
+}
+
+.game__image--tall {
+  height: 38vh;
+}
+
+.game__image--supertall {
+  height: 48vh;
+}
+
+.game__image--little {
+  height: 18vh;
+}
+
+.game__image--middle {
+  height: 25vh;
+}
+
+.quotes-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.quotes__side-image {
+  width: 25%;
+}
+
+.quotes__field {
+  background-color: #ffe02f;
+  width: 50%;
+}
+
+.quotes__logo {
+  margin: 2% 25%;
+  width: 50%;
+}
+
+.quotes__quote {
+  height: 15%;
+  padding: 10px;
+  text-transform: uppercase;
+}
+
+.quotes__image {
+  float: left;
+  height: 45%;
+}
+
+.quotes__character {
+  font-size: 24px;
+  margin: 10% 0 10% 50%;
+}
+
+.quotes__button {
+  background-color: #4ba7c4;
+  color: #fff;
+  display: block;
+  margin-left: 50%;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+  width: 160px;
 }
 
 @media screen and (max-width: 1000px) {
@@ -536,7 +684,7 @@ body, html {
   }
   .header__item {
     clear: both;
-    margin: 4vh 0;
+    margin: 5vh 0;
     text-align: center;
     width: 100%;
   }
@@ -574,6 +722,61 @@ body, html {
   .series__image {
     width: 44.8%;
   }
+  .carousel__button-container {
+    width: 70px;
+  }
+  .carousel__button {
+    margin: 152px 20px;
+    width: 30px;
+  }
+  .carousel-container {
+    margin: 0;
+  }
+  .carousel-field {
+    width: 471px;
+  }
+  .game__image-container {
+    display: none;
+  }
+  .game__field {
+    background-position-x: 0;
+  }
+  .game__field .game__image {
+    margin-top: 0;
+  }
+  .quotes__side-image {
+    display: none;
+  }
+  .quotes__field {
+    width: 100%;
+  }
+  .quotes__logo {
+    margin-left: 37%;
+    width: 26%;
+  }
+  .quotes__character {
+    margin: 1% 0 5% 50%;
+  }
+}
+
+@media screen and (max-width: 626px) {
+  .carousel__button-container {
+    background-color: transparent;
+    width: 50px;
+  }
+  .carousel__button-container:hover {
+    background-color: transparent;
+  }
+  .carousel__button {
+    margin: 152px 10px;
+    width: 30px;
+  }
+  .carousel-container {
+    margin: 0;
+  }
+  .carousel-field {
+    width: 235px;
+  }
 }
 
 @media screen and (max-width: 450px) {
@@ -606,5 +809,41 @@ body, html {
   }
   .section-title {
     font-size: 30px;
+  }
+  .game__image {
+    margin-top: 0;
+    max-height: 120px;
+  }
+  .game__image--tall {
+    max-height: 180px;
+  }
+  .game__image--supertall {
+    max-height: 215px;
+  }
+  .game__image--little {
+    max-height: 90px;
+  }
+  .quotes__logo {
+    margin-left: 30%;
+    width: 40%;
+  }
+  .quotes__quote {
+    font-size: 18px;
+  }
+  .quotes__image {
+    float: none;
+    margin: 0 20%;
+    max-width: 80%;
+  }
+  .quotes__character {
+    font-size: 18px;
+    margin: 1% 0 5% 0;
+    text-align: center;
+  }
+  .quotes__button {
+    margin: 0 3% 10%;
+    padding: 2%;
+    text-align: center;
+    width: 90%;
   }
 }
