@@ -113,7 +113,8 @@ body, html {
     width: 80%;
   }
   .image-container {
-    margin: 50px 0;
+    margin: 50px 0 50px -1000px;
+    opacity: 0;
     width: 100%;
   }
   &__image {
@@ -153,6 +154,7 @@ body, html {
     display: flex;
     margin: 100px 0;
     justify-content: space-between;
+    height: 100%;
   }
   &-field {
     background-color: #f0f0f0;
@@ -233,8 +235,12 @@ body, html {
     padding: 2vh 5px 0;
     position: absolute;
     text-align: center;
+    transition-duration: 0.3s;
     width: 25vh;
     z-index: 1000;
+  }
+  &__button-default:hover, &__button-bgimage:hover {
+    color: #fff;
   }
   &__button-bgimage{
     margin-top: 86vh ;
@@ -306,7 +312,12 @@ body, html {
     padding: 10px 20px;
     text-transform: uppercase;
     text-decoration: none;
+    transition-duration: 0.3s;
     width: 160px;
+  }
+  &__button:hover {
+    background-color: #bfeefc;
+    color: #000;
   }
 }
 
