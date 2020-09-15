@@ -454,16 +454,19 @@ body, html {
 }
 
 .series .image-container {
-  background-color: #3b3b3b;
   margin: 50px 0;
   width: 100%;
 }
 
 .series__image {
+  background: url(../img/frame2.png) center repeat-x;
+  border-right: 1% solid #000;
+  background-size: contain;
   display: block;
   float: left;
-  margin: 2.6%;
-  width: 28%;
+  margin: 1.1% 0;
+  padding: 1.2% 0;
+  width: 33.33%;
 }
 
 .carousel__button-field {
@@ -640,14 +643,19 @@ body, html {
 }
 
 .quotes__quote {
+  font-size: 16px;
   height: 15%;
   padding: 10px;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .quotes__image {
+  background: url(../img/milhouse1.png) no-repeat center center;
+  background-size: contain;
   float: left;
   height: 45%;
+  width: 50%;
 }
 
 .quotes__character {
@@ -658,8 +666,9 @@ body, html {
 .quotes__button {
   background-color: #4ba7c4;
   color: #fff;
+  cursor: pointer;
   display: block;
-  margin-left: 50%;
+  margin: 0 0 20% 50%;
   padding: 10px 20px;
   text-transform: uppercase;
   text-decoration: none;
@@ -720,7 +729,8 @@ body, html {
     width: 95%;
   }
   .series__image {
-    width: 44.8%;
+    padding: 1.5% 0;
+    width: 50%;
   }
   .carousel__button-container {
     width: 70px;
@@ -805,7 +815,8 @@ body, html {
     width: 100%;
   }
   .series__image {
-    width: 94.3%;
+    padding: 3% 0;
+    width: 100%;
   }
   .section-title {
     font-size: 30px;
@@ -823,16 +834,25 @@ body, html {
   .game__image--little {
     max-height: 90px;
   }
+  .quotes__field {
+    height: 450px;
+  }
   .quotes__logo {
     margin-left: 30%;
+    position: absolute;
     width: 40%;
   }
   .quotes__quote {
-    font-size: 18px;
+    margin-top: 20%;
+    font-size: 16px;
+    height: 100px;
+    position: absolute;
+    text-transform: lowercase;
   }
   .quotes__image {
     float: none;
-    margin: 0 20%;
+    margin: 230px 20% 0;
+    height: 30%;
     max-width: 80%;
   }
   .quotes__character {
@@ -841,7 +861,7 @@ body, html {
     text-align: center;
   }
   .quotes__button {
-    margin: 0 3% 10%;
+    margin: 0% 3%;
     padding: 2%;
     text-align: center;
     width: 90%;

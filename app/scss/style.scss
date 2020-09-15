@@ -113,15 +113,18 @@ body, html {
     width: 80%;
   }
   .image-container {
-    background-color: #3b3b3b;
     margin: 50px 0;
     width: 100%;
   }
   &__image {
+    background: url(../img/frame2.png) center repeat-x;
+    border-right: 1% solid #000;
+    background-size: contain;
     display: block;
     float: left;
-    margin: 2.6%;
-    width: 28%;
+    margin: 1.1% 0;
+    padding: 1.2% 0;
+    width: 33.33%;
   }
 }
 
@@ -277,13 +280,18 @@ body, html {
     width: 50%;
   }
   &__quote {
+    font-size: 16px;
     height: 15%;
     padding: 10px;
     text-transform: uppercase;
+    text-align: center;
   }
   &__image {
+    background: url(../img/milhouse1.png) no-repeat center center;
+    background-size: contain;
     float: left;
     height: 45%;
+    width: 50%
   }
   &__character {
     font-size: 24px;
@@ -292,8 +300,9 @@ body, html {
   &__button {
     background-color: #4ba7c4;
     color: #fff;
+    cursor: pointer;
     display: block;
-    margin-left: 50%;
+    margin: 0 0 20% 50%;
     padding: 10px 20px;
     text-transform: uppercase;
     text-decoration: none;
@@ -365,7 +374,8 @@ body, html {
       width: 95%;
     }
     &__image {
-      width: 44.8%;
+      padding: 1.5% 0;
+      width: 50%;
     }
   } 
   .carousel {
@@ -462,7 +472,8 @@ body, html {
       width: 100%;
     }
     &__image {
-      width: 94.3%;
+      padding: 3% 0;
+      width: 100%;
     }
   } 
   .section-title {
@@ -484,16 +495,25 @@ body, html {
     }
   }
   .quotes {
+    &__field {
+      height: 450px;
+    }
     &__logo {
       margin-left: 30%;
+      position: absolute;
       width: 40%;
     }
     &__quote {
-      font-size: 18px;
+      margin-top: 20%;
+      font-size: 16px;
+      height: 100px;
+      position: absolute;
+      text-transform: lowercase;
     }
     &__image {
       float: none;
-      margin: 0 20%;
+      margin: 230px 20% 0;
+      height: 30%;
       max-width: 80%;
     }
     &__character {
@@ -502,7 +522,7 @@ body, html {
       text-align: center;
     }
     &__button {
-      margin: 0 3% 10%;
+      margin: 0% 3% ;
       padding: 2%;
       text-align: center;
       width: 90%;
