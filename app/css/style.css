@@ -700,7 +700,7 @@ body, html {
     background-color: #ffbdd3;
     display: none;
     height: 75vh;
-    margin-top: 25vh;
+    margin-top: 27vh;
     position: absolute;
     width: 100%;
   }
@@ -728,6 +728,9 @@ body, html {
   .open-menu {
     display: block;
   }
+  .hide-title {
+    display: none;
+  }
   #logo {
     width: 56%;
     margin: 10px 22% 0;
@@ -736,6 +739,10 @@ body, html {
   .logo {
     width: 56%;
     margin: 10px 22% 0;
+  }
+  .series .image-container {
+    margin: 0;
+    opacity: 1;
   }
   .series__video {
     margin: 0 2.5%;

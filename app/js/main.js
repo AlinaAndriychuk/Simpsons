@@ -48,7 +48,10 @@ $(function(){
     } else {
       grad = 180;
     }
-    $(".header__menu").toggleClass("open-menu")
+    $(".header__menu").toggleClass("open-menu");
+    $(".header__title").toggleClass("hide-title");
+    $(".header__link").toggleClass("hide-title")
+
   })
   $(".header__link-item").on("click", function(e){
     var anchor = $(this);
