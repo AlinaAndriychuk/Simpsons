@@ -548,7 +548,7 @@ body, html {
 .game__image-container {
   background-color: #f1c3b3;
   float: left;
-  height: 72vh;
+  height: 79vh;
   margin: 0;
   overflow: hidden;
   padding: 7vh 5px 0;
@@ -574,7 +574,7 @@ body, html {
 }
 
 .game__button-container:first-child {
-  margin-top: 72vh;
+  margin-top: 79vh;
 }
 
 .game__button {
@@ -765,14 +765,8 @@ body, html {
   .carousel-field {
     width: 471px;
   }
-  .game__image-container {
+  .game {
     display: none;
-  }
-  .game__field {
-    background-position-x: 0;
-  }
-  .game__field .game__image {
-    margin-top: 0;
   }
   .quotes__side-image {
     display: none;

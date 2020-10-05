@@ -269,35 +269,35 @@ gameContainer.addEventListener('mousedown', function(event) {
   }
 
 });
-let currentDefault = true;
-let buttonDefault = document.getElementsByClassName("game__button-default")[0];
-buttonDefault.onclick = function(event) {
-  let allPersonages = gameContainer.getElementsByClassName("game__image");
+// let currentDefault = true;
+// let buttonDefault = document.getElementsByClassName("game__button-default")[0];
+// buttonDefault.onclick = function(event) {
+//   let allPersonages = gameContainer.getElementsByClassName("game__image");
   
-  let randomNumbers = [ 4, 3.6, 10, 18, 18, 7, 16.5, 13, 16, 2.7, 12, 7, 4, 9, 3];
-  let randomNumbersTop = [3, 6.5, 3, 6, 2, 3, 2.5, 4, 6.2, 4, 3.5, 7, 6, 7, 5]
-  let i = 0;
+//   let randomNumbers = [ 4, 3.6, 10, 18, 18, 7, 16.5, 13, 16, 2.7, 12, 7, 4, 9, 3];
+//   let randomNumbersTop = [3, 6.5, 3, 6, 2, 3, 2.5, 4, 6.2, 4, 3.5, 7, 6, 7, 5]
+//   let i = 0;
 
-  if(currentDefault) {
-    for( let every of allPersonages) {
+//   if(currentDefault) {
+//     for( let every of allPersonages) {
 
-      every.style.position = "absolute"
-      every.style.marginLeft = randomNumbers[i] * 10 + "vh";
-      every.style.marginTop = randomNumbersTop[i] * 10 + "vh";
-      i++
-    }
-    currentDefault = false;
-  } else {
-    for( let every of allPersonages) {
+//       every.style.position = "absolute"
+//       every.style.marginLeft = randomNumbers[i] * 10 + "vh";
+//       every.style.marginTop = randomNumbersTop[i] * 10 + "vh";
+//       i++
+//     }
+//     currentDefault = false;
+//   } else {
+//     for( let every of allPersonages) {
 
-      every.style.position = "relative"
-      every.style.marginLeft = 0 + "px";
-      every.style.marginTop = 0 + "px";
-    }
-    currentDefault = true;
-  }
+//       every.style.position = "relative"
+//       every.style.marginLeft = 0 + "px";
+//       every.style.marginTop = 0 + "px";
+//     }
+//     currentDefault = true;
+//   }
   
-}
+// }
 
 let gameHalfField = document.getElementsByClassName("game__field")[0];
 let buttonImage = document.getElementsByClassName("game__button-bgimage")[0];

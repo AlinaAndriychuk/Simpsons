@@ -199,7 +199,7 @@ body, html {
   &__image-container {
     background-color: #f1c3b3;
     float: left;
-    height: 72vh;
+    height: 79vh;
     margin: 0;
     overflow: hidden;
     padding: 7vh 5px 0;
@@ -222,7 +222,7 @@ body, html {
     background-color: #f1c3b3;
   }
   &__button-container:first-child {
-    margin-top: 72vh;
+    margin-top: 79vh;
   }
   &__button {
     width: 13vh;
@@ -411,15 +411,16 @@ body, html {
     }
   } 
   .game {
-    &__image-container {
-      display: none;
-    }
-    &__field {
-      background-position-x: 0;
-      .game__image {
-        margin-top: 0;
-      }
-    }
+    display: none;
+    // &__image-container {
+    //   display: none;
+    // }
+    // &__field {
+    //   background-position-x: 0;
+    //   .game__image {
+    //     margin-top: 0;
+    //   }
+    // }
   }
 
   .quotes {
