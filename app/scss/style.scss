@@ -30,6 +30,7 @@ body, html {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    z-index: 100;
   }
   &__item {
     float: left;
@@ -51,13 +52,21 @@ body, html {
 
   }
   &__bottom {
+    height: 80vh;
+    min-height: 350px;
+    position: relative;
+  }
+  &__bottom-container {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
     text-align: center;
+    width: 100%;
   }
   &__title {
     color: #fff;
     font-size: 50px;
-    margin: 37vh 0 5vh;
-    opacity: 0;
     text-shadow: $dark-pink 2px 2px 0, $dark-pink -2px -2px 0, $dark-pink -2px 2px 0, $dark-pink 2px -2px 0;
   }
   &__link {
@@ -65,6 +74,7 @@ body, html {
     border-radius: 5px;
     box-shadow: $dark-pink 3px 5px;
     color: #000;
+    opacity: 0;
     padding: 20px 30px;
     text-decoration: none;
     transition-duration: 0.3s;
@@ -76,6 +86,7 @@ body, html {
   }
   &__burger-menu {
     display: none;
+    opacity: 0;
   }
 }
 
@@ -92,6 +103,7 @@ body, html {
   height: 20vh;
   margin-left: 33%;
   min-height: 88px;
+  max-height: 570px;
   opacity: 0;
   position: absolute;
   width: 33%;
@@ -344,32 +356,41 @@ body, html {
     &__menu {
       background-color: $pink;
       display: none;
-      height: 75vh;
-      margin-top: 27vh;
-      min-height: 320px;
+      height: 60vh;
+      margin-top: 115px;
+      min-height: 280px;
+      padding-top: 50px;
       position: absolute;
       width: 100%;
     }
     &__item {
       clear: both;
-      margin: 5vh 0;
+      height: 17vh;
+      margin: 0;
+      min-height: 66px;
       text-align: center;
       width: 100%;
-    }
-    &__title {
-      font-size: 30px;
-      margin: 40vh 0 7vh;
     }
     &__burger-menu {
       cursor: pointer;
       display: block;
       margin: 20px;
       position: absolute;
-      width: 10vh;
-      z-index: 1000;
+      width: 60px;
     }
     &__link-item {
       padding: 10px 50px;
+    }
+    &__bottom {
+      height: 70vh;
+      min-height: 307px;
+    }
+    &__bottom-container {
+      top: 100%;
+      transform: translateY(-100%);
+    }
+    &__title {
+      font-size: 30px;
     }
   }
 
@@ -380,13 +401,15 @@ body, html {
     display: none;
   }
   #logo {
-    width: 56%;
+    height: 88px;
     margin: 10px 22% 0;
     position: relative;
+    width: 56%;
   }
   .logo {
-    width: 56%;
+    height: 88px;
     margin: 10px 22% 0;
+    width: 56%;
   }
 
   .series {
@@ -466,22 +489,29 @@ body, html {
   .header {
     background: url(../img/header3.png) no-repeat center $pink;
     background-size: 200px;
+    min-height: 480px;
+    &__bottom {
+      height: 60vh;
+    }
     &__title {
       font-size: 26px;
-      margin: 37vh 0 7vh;
     }
     &__burger-menu {
       width: 50px;
     }
   }
   #logo {
-    width: 56%;
+    height: 73px;
     margin: 40px 22% 0;
+    min-height: 73px;
     position: relative;
+    width: 56%;
   }
   .logo {
-    width: 56%;
+    height: 73px;
     margin: 40px 22% 0;
+    min-height: 73px;
+    width: 56%;
   }
   .series {
     &__video {

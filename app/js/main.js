@@ -13,8 +13,8 @@ $(function(){
 
   gsap.from(".header__item", {duration: 2, delay: 1, x: -500, opacity: 0, scale: 0.5});
   gsap.to(".header__title", { duration: 2, delay: 1, opacity: 1});
-  gsap.from(".header__link", { duration: 2, delay: 1, opacity: 0});
-  gsap.from(".header__burger-menu", {duration: 2, delay: 1, y: 500});
+  gsap.to(".header__link", { duration: 2, delay: 1, opacity: 1});
+  gsap.to(".header__burger-menu", {duration: 2, delay: 1, opacity: 1});
 
   let grad = 180;
 
