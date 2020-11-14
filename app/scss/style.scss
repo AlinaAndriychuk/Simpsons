@@ -18,8 +18,9 @@ body, html {
   background: url(../img/header1.png) no-repeat $pink;
   background-position-x: 100px;
   background-position-y: bottom;
-  background-size: 70vh;
+  background-size: 34%;
   height: 100vh;
+  min-height: 440px;
   &__navigation {
     display: flex;
     justify-content: center;
@@ -56,6 +57,7 @@ body, html {
     color: #fff;
     font-size: 50px;
     margin: 37vh 0 5vh;
+    opacity: 0;
     text-shadow: $dark-pink 2px 2px 0, $dark-pink -2px -2px 0, $dark-pink -2px 2px 0, $dark-pink 2px -2px 0;
   }
   &__link {
@@ -80,6 +82,7 @@ body, html {
 #logo {
   height: 20vh;
   margin-left: 33%;
+  min-height: 88px;
   overflow: visible;
   position: absolute;
   width: 33%;
@@ -88,6 +91,7 @@ body, html {
 .logo {
   height: 20vh;
   margin-left: 33%;
+  min-height: 88px;
   opacity: 0;
   position: absolute;
   width: 33%;
@@ -112,9 +116,11 @@ body, html {
     margin: 0 10%;
     width: 80%;
   }
+  &__video:focus {
+    outline: none;
+  }
   .image-container {
-    margin: 50px 0 50px -1000px;
-    opacity: 0;
+    margin: 50px 0 50px;
     width: 100%;
   }
   &__image {
@@ -253,6 +259,7 @@ body, html {
     transition-duration: 0.3s;
   }
   &__image {
+    cursor: pointer;
     margin: 0 auto;
   }
   &__image--tall {
@@ -339,6 +346,7 @@ body, html {
       display: none;
       height: 75vh;
       margin-top: 27vh;
+      min-height: 320px;
       position: absolute;
       width: 100%;
     }
@@ -412,15 +420,6 @@ body, html {
   } 
   .game {
     display: none;
-    // &__image-container {
-    //   display: none;
-    // }
-    // &__field {
-    //   background-position-x: 0;
-    //   .game__image {
-    //     margin-top: 0;
-    //   }
-    // }
   }
 
   .quotes {

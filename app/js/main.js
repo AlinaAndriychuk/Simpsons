@@ -1,43 +1,20 @@
 "use strict";
 
-(function(){ 
-
+$(function(){
   document.onreadystatechange = () => {
-
     if (document.readyState === 'complete') {
       let el = document.querySelector('#logo');
       let myAnimation = new LazyLinePainter(el, {"ease":"easeInSine","strokeWidth":2.7,"strokeOpacity":1,"strokeColor":"#000000","strokeCap":"round"}); 
       myAnimation.paint(); 
       gsap.to(".logo", {opacity:1, duration:1, delay:4})
+      gsap.to("#logo", {opacity:0, duration:1, delay:4})
     }
   };
- 
-})();
 
-$(function(){
-
-  gsap.from(".header__item", {duration: 2, x: -500, opacity: 0, scale: 0.5});
-  gsap.from(".header__title", { duration: 2, ease: "back.out(1.7)", y: -300 });
-  gsap.from(".header__link", { duration: 2, opacity: 0 });
-  gsap.from(".header__burger-menu", {duration: 2, y: 500});
-
-  let current1 = true,
-      current2 = true;
-
-  $(window).scroll(function() {
-    if(document.documentElement.clientWidth >= 985) {
-      if ($(this).scrollTop() > 900 && $(this).scrollTop() < 1700) {
-        effectVideoAppear(current1);
-        current1 = false;
-      }
-    } 
-  })
-
-  function effectVideoAppear(switcher) {
-    if(switcher) {
-      gsap.to(".image-container", { duration: 2, x: 1000, opacity: 1});
-    }
-  }
+  gsap.from(".header__item", {duration: 2, delay: 1, x: -500, opacity: 0, scale: 0.5});
+  gsap.to(".header__title", { duration: 2, delay: 1, opacity: 1});
+  gsap.from(".header__link", { duration: 2, delay: 1, opacity: 0});
+  gsap.from(".header__burger-menu", {duration: 2, delay: 1, y: 500});
 
   let grad = 180;
 
@@ -269,35 +246,6 @@ gameContainer.addEventListener('mousedown', function(event) {
   }
 
 });
-// let currentDefault = true;
-// let buttonDefault = document.getElementsByClassName("game__button-default")[0];
-// buttonDefault.onclick = function(event) {
-//   let allPersonages = gameContainer.getElementsByClassName("game__image");
-  
-//   let randomNumbers = [ 4, 3.6, 10, 18, 18, 7, 16.5, 13, 16, 2.7, 12, 7, 4, 9, 3];
-//   let randomNumbersTop = [3, 6.5, 3, 6, 2, 3, 2.5, 4, 6.2, 4, 3.5, 7, 6, 7, 5]
-//   let i = 0;
-
-//   if(currentDefault) {
-//     for( let every of allPersonages) {
-
-//       every.style.position = "absolute"
-//       every.style.marginLeft = randomNumbers[i] * 10 + "vh";
-//       every.style.marginTop = randomNumbersTop[i] * 10 + "vh";
-//       i++
-//     }
-//     currentDefault = false;
-//   } else {
-//     for( let every of allPersonages) {
-
-//       every.style.position = "relative"
-//       every.style.marginLeft = 0 + "px";
-//       every.style.marginTop = 0 + "px";
-//     }
-//     currentDefault = true;
-//   }
-  
-// }
 
 let gameHalfField = document.getElementsByClassName("game__field")[0];
 let buttonImage = document.getElementsByClassName("game__button-bgimage")[0];
@@ -352,4 +300,3 @@ buttonImage.onclick = function(event) {
 
 
 })
-// 
