@@ -67,6 +67,7 @@ body, html {
   &__title {
     color: #fff;
     font-size: 50px;
+    opacity: 0;
     text-shadow: $dark-pink 2px 2px 0, $dark-pink -2px -2px 0, $dark-pink -2px 2px 0, $dark-pink 2px -2px 0;
   }
   &__link {
