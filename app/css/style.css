@@ -337,7 +337,8 @@ template {
   display: none;
 }
 
-body, html {
+body,
+html {
   font-family: 'Architects Daughter', cursive;
   height: 100%;
   left: 0;
@@ -398,15 +399,16 @@ body, html {
 .header__bottom-container {
   margin: 0;
   position: absolute;
+  text-align: center;
   top: 50%;
   transform: translateY(-50%);
-  text-align: center;
   width: 100%;
 }
 
 .header__title {
   color: #fff;
   font-size: 50px;
+  opacity: 0;
   text-shadow: #9c6274 2px 2px 0, #9c6274 -2px -2px 0, #9c6274 -2px 2px 0, #9c6274 2px -2px 0;
 }
 
@@ -444,8 +446,8 @@ body, html {
 .logo {
   height: 20vh;
   margin-left: 33%;
-  min-height: 88px;
   max-height: 570px;
+  min-height: 88px;
   opacity: 0;
   position: absolute;
   width: 33%;
@@ -460,8 +462,8 @@ body, html {
 }
 
 .clearfix {
-  content: "";
   clear: both;
+  content: "";
   display: table;
 }
 
@@ -481,8 +483,8 @@ body, html {
 
 .series__image {
   background: url(../img/frame2.png) center repeat-x;
-  border-right: 1% solid #000;
   background-size: contain;
+  border-right: 1% solid #000;
   display: block;
   float: left;
   margin: 1.1% 0;
@@ -674,8 +676,8 @@ body, html {
   font-size: 16px;
   height: 15%;
   padding: 10px;
-  text-transform: uppercase;
   text-align: center;
+  text-transform: uppercase;
 }
 
 .quotes__image {
@@ -698,8 +700,8 @@ body, html {
   display: block;
   margin: 0 0 20% 50%;
   padding: 10px 20px;
-  text-transform: uppercase;
   text-decoration: none;
+  text-transform: uppercase;
   transition-duration: 0.3s;
   width: 160px;
 }
@@ -905,8 +907,8 @@ body, html {
   }
   .quotes__image {
     float: none;
-    margin: 230px 20% 0;
     height: 30%;
+    margin: 230px 20% 0;
     max-width: 80%;
   }
   .quotes__character {
@@ -915,7 +917,7 @@ body, html {
     text-align: center;
   }
   .quotes__button {
-    margin: 0% 3%;
+    margin: 0 3%;
     padding: 2%;
     text-align: center;
     width: 90%;
