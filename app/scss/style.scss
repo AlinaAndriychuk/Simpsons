@@ -5,12 +5,13 @@ $pink: #ffbdd3;
 $dark-pink: #9c6274;
 $red: #ee1f1f;
 
-body, html {
+body, 
+html {
   font-family: 'Architects Daughter', cursive;
   height: 100%;
-  left:0;
+  left: 0;
   margin: 0;
-  top:0;
+  top: 0;
   width: 100%;
 }
 
@@ -21,10 +22,12 @@ body, html {
   background-size: 34%;
   height: 100vh;
   min-height: 440px;
+
   &__navigation {
     display: flex;
     justify-content: center;
   }
+
   &__menu {
     display: block;
     list-style-type: none;
@@ -32,10 +35,12 @@ body, html {
     padding: 0;
     z-index: 100;
   }
+
   &__item {
     float: left;
     margin: 30px 5px;
   }
+
   &__link-item {
     border-radius: 5px;
     color: #000;
@@ -46,30 +51,34 @@ body, html {
     transition-duration: 0.3s;
     vertical-align: middle;
   }
+
   &__link-item:hover {
     background-color: $dark-pink;
     color: #fff;
-
   }
+
   &__bottom {
     height: 80vh;
     min-height: 350px;
     position: relative;
   }
+
   &__bottom-container {
     margin: 0;
     position: absolute;
+    text-align: center;
     top: 50%;
     transform: translateY(-50%);
-    text-align: center;
     width: 100%;
   }
+
   &__title {
     color: #fff;
     font-size: 50px;
     opacity: 0;
     text-shadow: $dark-pink 2px 2px 0, $dark-pink -2px -2px 0, $dark-pink -2px 2px 0, $dark-pink 2px -2px 0;
   }
+
   &__link {
     background-color: #fff;
     border-radius: 5px;
@@ -80,15 +89,18 @@ body, html {
     text-decoration: none;
     transition-duration: 0.3s;
   }
+
   &__link:hover {
     background-color: $dark-pink;
     box-shadow: none;
     color: #fff;
   }
+
   &__burger-menu {
     display: none;
     opacity: 0;
   }
+
 }
 
 #logo {
@@ -103,8 +115,8 @@ body, html {
 .logo {
   height: 20vh;
   margin-left: 33%;
-  min-height: 88px;
   max-height: 570px;
+  min-height: 88px;
   opacity: 0;
   position: absolute;
   width: 33%;
@@ -119,62 +131,73 @@ body, html {
 }
 
 .clearfix {
-  content: "";
   clear: both;
+  content: "";
   display: table;
 }
 
 .series {
+
   &__video {
     margin: 0 10%;
     width: 80%;
   }
+
   &__video:focus {
     outline: none;
   }
+
   .image-container {
     margin: 50px 0 50px;
     width: 100%;
   }
+
   &__image {
     background: url(../img/frame2.png) center repeat-x;
-    border-right: 1% solid #000;
     background-size: contain;
+    border-right: 1% solid #000;
     display: block;
     float: left;
     margin: 1.1% 0;
     padding: 1.2% 0;
     width: 33.33%;
   }
+
 }
 
 .carousel {
+
   &__button-field {
-    display: flex ;
+    display: flex;
     justify-content: space-between;
     position: absolute;
     width: 100%;
   }
+
   &__button-container {
-    background-color:#f0f0f0;
+    background-color: #f0f0f0;
     cursor: pointer;
     height: 380px;
     transition-duration: 0.3s;
     width: 100px;
   }
+
   &__button-container:hover {
     background-color: #fff;
   }
+
   &__button {
     margin: 135px 28px;
     width: 42px;
   }
+
   &-container {
     display: flex;
     margin: 100px 0;
     justify-content: space-between;
     height: 100%;
   }
+
   &-field {
     background-color: #f0f0f0;
     height: 350px;
@@ -185,29 +208,36 @@ body, html {
     transition: 1s;
     width: 700px;
   }
+
   &__gallery {
     width: 2831px;
   }
+
   &-block {
     display: inline-block;
     height: 350px;
     width: 230px;
   }
+
   &__image {
     display: block;
     margin: 0 auto;
     max-height: 280px;
   }
+
   &__text {
     font-size: 24px;
     text-align: center;
   }
+
   &__image--small {
     max-height: 200px;
   }
+
   &__image--supersmall {
     max-height: 150px;
   }
+
 }
 
 .section-note {
@@ -215,6 +245,7 @@ body, html {
 }
 
 .game {
+
   &__image-container {
     background-color: #f1c3b3;
     float: left;
@@ -224,6 +255,7 @@ body, html {
     padding: 7vh 5px 0;
     width: 25vh;
   }
+
   &__button-container {
     background-color: #a777c1;
     cursor: pointer;
@@ -237,16 +269,23 @@ body, html {
     width: 25vh;
     z-index: 1000;
   }
-  &__button-container:hover, &__button-default:hover, &__button-bgimage:hover {
+
+  &__button-container:hover, 
+  &__button-default:hover, 
+  &__button-bgimage:hover {
     background-color: #f1c3b3;
   }
+
   &__button-container:first-child {
     margin-top: 79vh;
   }
+
   &__button {
     width: 13vh;
   } 
-  &__button-default, &__button-bgimage{
+
+  &__button-default, 
+  &__button-bgimage{
     background-color: #a777c1;
     cursor: pointer;
     height: 5vh;
@@ -258,12 +297,16 @@ body, html {
     width: 25vh;
     z-index: 1000;
   }
-  &__button-default:hover, &__button-bgimage:hover {
+
+  &__button-default:hover, 
+  &__button-bgimage:hover {
     color: #fff;
   }
+
   &__button-bgimage{
     margin-top: 86vh ;
   }
+
   &__field {
     background: url(../img/school.jpg) no-repeat bottom right;
     background-position-x: 25vh;
@@ -271,58 +314,72 @@ body, html {
     height: 100vh;
     transition-duration: 0.3s;
   }
+
   &__image {
     cursor: pointer;
     margin: 0 auto;
   }
+
   &__image--tall {
     height: 38vh;
   }
+
   &__image--supertall {
     height: 48vh;
   }
+  
   &__image--little {
     height: 18vh;
   }
+
   &__image--middle {
     height: 25vh; 
   }
+
 }
 
 .quotes {
+
   &-container {
     display: flex;
     justify-content: space-between;
   }
+
   &__side-image {
     width: 25%;
   }
+
   &__field {
     background-color: #ffe02f;
     width: 50%;
   }
+
   &__logo {
     margin: 2% 25%;
     width: 50%;
   }
+
   &__quote {
     font-size: 16px;
     height: 15%;
     padding: 10px;
-    text-transform: uppercase;
     text-align: center;
+    text-transform: uppercase;
   }
+
   &__image {
     background: url(../img/milhouse1.png) no-repeat center center;
     background-size: contain;
     float: left;
     height: 45%;
-    width: 50%
+    width: 50%;
   }
+
   &__character {
     font-size: 24px;
     margin: 10% 0 10% 50%;
   }
+
   &__button {
     background-color: #4ba7c4;
     color: #fff;
@@ -330,30 +387,29 @@ body, html {
     display: block;
     margin: 0 0 20% 50%;
     padding: 10px 20px;
-    text-transform: uppercase;
     text-decoration: none;
+    text-transform: uppercase;
     transition-duration: 0.3s;
     width: 160px;
   }
+
   &__button:hover {
     background-color: #bfeefc;
     color: #000;
   }
+
 }
 
-
-
-
-
-
-
 @media screen and (max-width: 1000px) {
+
   .header {
     background: url(../img/header3.png) no-repeat center $pink;
     background-size: 400px;
+
     &__navigation {
       justify-content: flex-start;
     }
+
     &__menu {
       background-color: $pink;
       display: none;
@@ -364,6 +420,7 @@ body, html {
       position: absolute;
       width: 100%;
     }
+
     &__item {
       clear: both;
       height: 17vh;
@@ -372,6 +429,7 @@ body, html {
       text-align: center;
       width: 100%;
     }
+
     &__burger-menu {
       cursor: pointer;
       display: block;
@@ -379,34 +437,42 @@ body, html {
       position: absolute;
       width: 60px;
     }
+
     &__link-item {
       padding: 10px 50px;
     }
+    
     &__bottom {
       height: 70vh;
       min-height: 307px;
     }
+
     &__bottom-container {
       top: 100%;
       transform: translateY(-100%);
     }
+
     &__title {
       font-size: 30px;
     }
+
   }
 
   .open-menu {
     display: block;
   }
+
   .hide-title {
     display: none;
   }
+
   #logo {
     height: 88px;
     margin: 10px 22% 0;
     position: relative;
     width: 56%;
   }
+
   .logo {
     height: 88px;
     margin: 10px 22% 0;
@@ -414,93 +480,123 @@ body, html {
   }
 
   .series {
+
     .image-container {
       margin: 0;
       opacity: 1;
     }
+
     &__video {
       margin: 0 2.5%;
       width: 95%;
     }
+
     &__image {
       padding: 1.5% 0;
       width: 50%;
     }
+
   } 
+
   .carousel {
+
     &__button-container {
       width: 70px;
     }
+
     &__button {
       margin: 152px 20px;
       width: 30px;
     }
+
     &-container {
       margin: 0;
     }
+
     &-field {
       width: 471px;
     }
+
   } 
+
   .game {
     display: none;
   }
 
   .quotes {
+
     &__side-image {
       display: none;
     }
+
     &__field {
       width: 100%;
     }
+
     &__logo {
       margin-left: 37%;
       width: 26%;
     }
+
     &__character {
       margin: 1% 0 5% 50%;
     }
+
   }
   
 }
 
 @media screen and (max-width: 626px) {
+
   .carousel {
+
     &__button-container {
       background-color: transparent;
       width: 50px;
     }
+
     &__button-container:hover {
       background-color: transparent;
     }
+
     &__button {
       margin: 152px 10px;
       width: 30px;
     }
+
     &-container {
       margin: 0;
     }
+
     &-field {
       width: 235px;
     }
+
   } 
+
 }
 
 @media screen and (max-width: 450px) {
+
   .header {
     background: url(../img/header3.png) no-repeat center $pink;
     background-size: 200px;
     min-height: 480px;
+
     &__bottom {
       height: 60vh;
     }
+
     &__title {
       font-size: 26px;
     }
+
     &__burger-menu {
       width: 50px;
     }
+
   }
+
   #logo {
     height: 73px;
     margin: 40px 22% 0;
@@ -508,49 +604,65 @@ body, html {
     position: relative;
     width: 56%;
   }
+
   .logo {
     height: 73px;
     margin: 40px 22% 0;
     min-height: 73px;
     width: 56%;
   }
+
   .series {
+
     &__video {
       margin: 0;
       width: 100%;
     }
+
     &__image {
       padding: 3% 0;
       width: 100%;
     }
+
   } 
+
   .section-title {
     font-size: 30px;
   }
+
   .game {
+
     &__image {
       margin-top: 0;
       max-height: 120px;
     }
+
     &__image--tall {
       max-height: 180px;
     }
+
     &__image--supertall {
       max-height: 215px;
     }
+
     &__image--little {
       max-height: 90px;
     }
+
   }
+
   .quotes {
+
     &__field {
       height: 450px;
     }
+
     &__logo {
       margin-left: 30%;
       position: absolute;
       width: 40%;
     }
+
     &__quote {
       margin-top: 20%;
       font-size: 16px;
@@ -558,22 +670,27 @@ body, html {
       position: absolute;
       text-transform: lowercase;
     }
+
     &__image {
       float: none;
-      margin: 230px 20% 0;
       height: 30%;
+      margin: 230px 20% 0;
       max-width: 80%;
     }
+
     &__character {
       font-size: 18px;
       margin: 1% 0 5% 0;
       text-align: center;
     }
+
     &__button {
-      margin: 0% 3% ;
+      margin: 0 3% ;
       padding: 2%;
       text-align: center;
       width: 90%;
     }
+
   }
+
 } 
