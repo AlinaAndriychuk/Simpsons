@@ -265,7 +265,6 @@ $(function() {
     if (numberOfBackground > 4) numberOfBackground = 0;
 
     gameHalfField.style.backgroundImage = urlOfBackground[numberOfBackground];
-    buttonDefault.style.backgroundColor = colorOfButtons[numberOfBackground];
     buttonImage.style.backgroundColor = colorOfButtons[numberOfBackground];
     carouselButtonsGame[0].style.backgroundColor = colorOfButtons[numberOfBackground];
     carouselButtonsGame[1].style.backgroundColor = colorOfButtons[numberOfBackground];
