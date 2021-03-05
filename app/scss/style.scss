@@ -5,14 +5,39 @@ $pink: #ffbdd3;
 $dark-pink: #9c6274;
 $red: #ee1f1f;
 
-body, 
-html {
+body {
   font-family: 'Architects Daughter', cursive;
   height: 100%;
-  left: 0;
   margin: 0;
-  top: 0;
+  overflow: hidden;
+  padding-right: 16px;
+}
+
+.preloader {
   width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: #ffe02f;
+  z-index: 1000;
+}
+
+.loader {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  top: 50%;
+  left: 50%;
+  background: url(../img/icon-donut.png) no-repeat;
+  animation: rotate 2s infinite linear
+}
+
+@keyframes  rotate{
+  0% {
+    transform: translate(-50%, -50%) rotateZ(0deg)
+  }
+  100% {
+    transform: translate(-50%, -50%) rotateZ(360deg)
+  }
 }
 
 .header {
@@ -103,29 +128,20 @@ html {
 
 }
 
-#logo {
-  height: 20vh;
-  margin-left: 33%;
-  min-height: 88px;
-  overflow: visible;
-  position: absolute;
-  width: 33%;
-}
-
 .logo {
   height: 20vh;
-  margin-left: 33%;
   max-height: 570px;
   min-height: 88px;
-  opacity: 0;
-  position: absolute;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
   width: 33%;
 }
 
 .section-title {
   font-size: 46px;
-  margin: 40px 0;
-  padding: 5px;
+  margin: 0;
+  padding: 40px 5px;
   text-align: center;
   text-transform: uppercase;
 }
@@ -466,16 +482,9 @@ html {
     display: none;
   }
 
-  #logo {
-    height: 88px;
-    margin: 10px 22% 0;
-    position: relative;
-    width: 56%;
-  }
-
   .logo {
     height: 88px;
-    margin: 10px 22% 0;
+    margin: 10px 0 0;
     width: 56%;
   }
 
@@ -597,17 +606,9 @@ html {
 
   }
 
-  #logo {
-    height: 73px;
-    margin: 40px 22% 0;
-    min-height: 73px;
-    position: relative;
-    width: 56%;
-  }
-
   .logo {
     height: 73px;
-    margin: 40px 22% 0;
+    margin: 40px 0 0;
     min-height: 73px;
     width: 56%;
   }

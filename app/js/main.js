@@ -1,15 +1,24 @@
 "use strict";
 
 $(function() {
-  document.onreadystatechange = ()=> {
-    if (document.readyState === 'complete') {
-      let el = document.querySelector('#logo');
-      let myAnimation = new LazyLinePainter(el, {"ease":"easeInSine","strokeWidth":2.7,"strokeOpacity":1,"strokeColor":"#000000","strokeCap":"round"}); 
-      myAnimation.paint(); 
-      gsap.to(".logo", {opacity:1, duration:1, delay:4});
-      gsap.to("#logo", {opacity:0, duration:1, delay:4});
-    };
-  };
+  gsap.to(".loader", {
+    top: '150%',
+    display: 'none',
+    delay: 2,
+    duration: 1,
+  });
+  gsap.to(".preloader", {
+    top: "-100%",
+    delay: 3,
+    duration: 1,
+    display: 'none',
+    onComplete: () => {
+      $("body").css({
+        "overflow": "visible",
+        "padding-right": 0
+      })
+    }
+  })
 
   gsap.from(".header__item", {duration: 2, delay: 1, x: -500, opacity: 0, scale: 0.5});
   gsap.to(".header__title", { duration: 2, delay: 1, opacity: 1});
